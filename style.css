@@ -1,0 +1,47 @@
+.pool {
+    width: 960px;
+    height: 600px;
+    background: lightblue;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+.referee {
+    position: absolute;
+    background-image: url(referee.gif);
+    background-size: cover;
+    height: 350px;
+    width: 100px;
+    left: -20%;
+}
+
+.swimmer {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    /*left: 89.5%;*/
+}
+
+.one {
+    background: red;
+}
+
+.two {
+    background: yellow;
+}
+.three {
+    background: green;
+}
+.four {
+    background: brown;
+}
+
+button {
+    top: 102%;
+    font-size: 2rem;
+    position: absolute;
+}
