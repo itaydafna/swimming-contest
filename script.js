@@ -4,25 +4,75 @@ var pool = document.getElementById("pool"),
     swimmerTwo = document.getElementById("two"),
     swimmerThree = document.getElementById("three"),
     swimmerFour = document.getElementById("four");
-    // referee = document.getElementById("referee");
-    // // event = new Event ("gunShot");
+    referee = document.getElementById("referee");
+    gunShot = new Event ("gunShot");
 
 
+function dispatchGunShot () {
+    referee.style.backgroundImage="url('yosemitesam02.gif')";
+    referee.style.height="180px";
+    referee.style.width="220px";
+    setInterval(function(){referee.dispatchEvent(gunShot)},400);
+}
+
+
+//working function - do not change!
+//
 function swimRandomPace(el) {
         if (el.style.marginLeft === "") {
             el.style.marginLeft = 0
         }
         var randMs = 50*Math.random();
         helper.animate(el, function (el) {
-            if (parseInt(el.style.marginLeft,0)>=860){return true};
+            if (parseInt(el.style.marginLeft,0)>=860){return};
             var marL = parseInt(el.style.marginLeft, 10) + 3;
             el.style.marginLeft = marL + "px";
         }, randMs);
 
 }
 
+//
+// function swimRandomPace(el) {
+//     if (el.style.marginLeft === "") {
+//         el.style.marginLeft = 0
+//     }
+//
+//         var counter = 0;
+//         var randMs = 50 * Math.random();
+//         helper.animate(el, function (el) {
+//             if (parseInt(el.style.marginLeft, 0) >= 860) {
+//                 return
+//             } else if (counter > 60) {
+//                 return true;
+//             }
+//             ;
+//             var marL = parseInt(el.style.marginLeft, 10) + 3;
+//             el.style.marginLeft = marL + "px";
+//             counter++;
+//         }, randMs);
+//
+// }
+//
 
-go.addEventListener('click',swimRandomPace(swimmerOne));
-go.addEventListener('click',swimRandomPace(swimmerTwo));
-go.addEventListener('click',swimRandomPace(swimmerThree));
-go.addEventListener('click',swimRandomPace(swimmerFour));
+
+
+go.addEventListener('click',dispatchGunShot)
+
+
+referee.addEventListener('gunShot',function(){swimRandomPace(swimmerOne)});
+referee.addEventListener('gunShot',function(){swimRandomPace(swimmerTwo)});
+referee.addEventListener('gunShot',function(){swimRandomPace(swimmerThree)});
+referee.addEventListener('gunShot',function(){swimRandomPace(swimmerFour)});
+
+
+
+
+//working function - do not change!
+//
+// go.addEventListener('click',dispatchGunShot)
+//
+//
+// referee.addEventListener('gunShot',function(){swimRandomPace(swimmerOne)});
+// referee.addEventListener('gunShot',function(){swimRandomPace(swimmerTwo)});
+// referee.addEventListener('gunShot',function(){swimRandomPace(swimmerThree)});
+// referee.addEventListener('gunShot',function(){swimRandomPace(swimmerFour)});

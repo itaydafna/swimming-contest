@@ -1,8 +1,13 @@
+body {
+    background: url(ground.jpg);
+
+}
 .pool {
-    width: 960px;
+    width: 980px;
     height: 600px;
-    background: lightblue;
-    margin: 20px auto;
+    /*background: url(ground.jpg);*/
+    background-size: cover;
+    margin: 100px auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -11,11 +16,12 @@
 
 .referee {
     position: absolute;
-    background-image: url(referee.gif);
+    background: url(YosemiteSam1.gif) no-repeat;
     background-size: cover;
-    height: 350px;
-    width: 100px;
-    left: -20%;
+    height: 150px;
+    width: 75px;
+    left: -15%;
+    transition: all 600ms;
 }
 
 .swimmer {
@@ -23,25 +29,43 @@
     height: 100px;
     width: 100px;
     position: relative;
-    /*left: 89.5%;*/
+    z-index: 500;
+
+}
+
+.swimmer img {
+    height: 120px;
+    width: 120px;
+
 }
 
 .one {
-    background: red;
 }
 
 .two {
-    background: yellow;
+    transform: scaleX(-1);
 }
 .three {
-    background: green;
+    transform: scaleX(-1);
 }
 .four {
-    background: brown;
+
 }
 
 button {
-    top: 102%;
+    top: -10%;
+    left: -15%;
     font-size: 2rem;
     position: absolute;
+}
+
+.finish-line {
+    position: absolute;
+    height: 110%;
+    width: 10px;
+    background: white;
+    opacity:0.15;
+    top:-10%;
+    left: 85%;
+    border-radius: 20%;
 }
