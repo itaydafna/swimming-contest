@@ -53,10 +53,18 @@ body {
 }
 
 button {
-    top: -10%;
+    top: -13%;
     left: -15%;
     font-size: 2rem;
     position: absolute;
+    background: url(ltbg.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    background-position: 50% 0;
+    height:85px;
+    width: 85px;
+    color: white;
+    outline: none;
 }
 
 .finish-line {
