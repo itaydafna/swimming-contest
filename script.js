@@ -16,8 +16,7 @@ function dispatchGunShot () {
 }
 
 
-//working function - do not change!
-//
+
 function swimRandomPace(el) {
         if (el.style.marginLeft === "") {
             el.style.marginLeft = 0
@@ -31,28 +30,6 @@ function swimRandomPace(el) {
 
 }
 
-//
-// function swimRandomPace(el) {
-//     if (el.style.marginLeft === "") {
-//         el.style.marginLeft = 0
-//     }
-//
-//         var counter = 0;
-//         var randMs = 50 * Math.random();
-//         helper.animate(el, function (el) {
-//             if (parseInt(el.style.marginLeft, 0) >= 860) {
-//                 return
-//             } else if (counter > 60) {
-//                 return true;
-//             }
-//             ;
-//             var marL = parseInt(el.style.marginLeft, 10) + 3;
-//             el.style.marginLeft = marL + "px";
-//             counter++;
-//         }, randMs);
-//
-// }
-//
 
 
 
@@ -66,13 +43,3 @@ referee.addEventListener('gunShot',function(){swimRandomPace(swimmerFour)});
 
 
 
-
-//working function - do not change!
-//
-// go.addEventListener('click',dispatchGunShot)
-//
-//
-// referee.addEventListener('gunShot',function(){swimRandomPace(swimmerOne)});
-// referee.addEventListener('gunShot',function(){swimRandomPace(swimmerTwo)});
-// referee.addEventListener('gunShot',function(){swimRandomPace(swimmerThree)});
-// referee.addEventListener('gunShot',function(){swimRandomPace(swimmerFour)});
